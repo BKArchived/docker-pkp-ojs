@@ -1,0 +1,14 @@
+# docker-compose.yml
+ojs:
+  build: .
+  ports:
+    - 80
+  links:
+    - mysql:db
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=XYZ
+    - MYSQL_DATABASE=XYZ
+    - MYSQL_USER=XYZ
+    - MYSQL_PASSWORD=XYZ
